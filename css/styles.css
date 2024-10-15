@@ -185,6 +185,13 @@ menu a:hover {
 .project-image img {
   width: 100%;
   border-radius: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.project-image img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.010);
 }
 
 .tools {
