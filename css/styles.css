@@ -133,6 +133,15 @@ menu a:hover {
   font-weight: 400;
 }
 
+.profile-pic{
+  webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.profile-pic img {
+  border-radius: 1rem;
+}
+
 .container {
   border-top: 1px solid var(--primary-950);
   display: flex;
@@ -175,7 +184,7 @@ menu a:hover {
 
 .project-image img {
   width: 100%;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 
 .tools {
@@ -191,6 +200,18 @@ menu a:hover {
 
 .abstract p{
   text-align: justify;
+}
+
+#about-me {
+  gap: 5rem;
+}
+
+#bio h3 {
+  font-size: 3rem;
+}
+
+#bio p {
+  font-size: 1.5rem;
 }
 
 footer p {
