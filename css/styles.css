@@ -222,6 +222,44 @@ menu a:hover {
   font-size: 1.5rem;
 }
 
+#work-experience .header {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+
+.employment h4 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.position {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.company {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.employment .type {
+  margin-left: 0.5rem;
+  padding: 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border: 1px solid var(--primary-950);
+  border-radius: 2rem;
+}
+
+.responsibilities {
+  font-size: 1.25rem;
+}
+
+.responsibilities li{
+  margin-bottom: 0.5rem;
+}
+
 footer p {
   margin: 0;
 }
