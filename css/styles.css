@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
 
 :root[data-theme="light"] {
   --secondary-50: hsl(60, 8%, 95%);
@@ -133,7 +133,7 @@ menu a:hover {
   font-weight: 400;
 }
 
-.profile-pic{
+.profile-pic {
   webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
@@ -156,7 +156,7 @@ menu a:hover {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 400;
-  letter-spacing: 0.10rem;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
@@ -191,7 +191,7 @@ menu a:hover {
 
 .project-image img:hover {
   filter: grayscale(0%);
-  transform: scale(1.010);
+  transform: scale(1.01);
 }
 
 .tools {
@@ -205,13 +205,14 @@ menu a:hover {
 .tools span,
 .employment .type,
 .major .degree,
-.coursework li  {
-  padding: 0.15rem 1rem; 
+.coursework li,
+.items li {
+  padding: 0.15rem 1rem;
   border: 1px solid var(--primary-950);
   border-radius: 2rem;
 }
 
-.abstract p{
+.abstract p {
   font-size: 1.25rem;
   text-align: justify;
 }
@@ -231,19 +232,21 @@ menu a:hover {
 #work-experience .header,
 #education .header {
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .employment h4,
 .major,
-.university {
+.university,
+.category {
   margin: 0;
   margin-bottom: 0.5rem;
 }
 
 .position,
-.major {
+.major,
+.category {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -265,11 +268,12 @@ menu a:hover {
   font-size: 1.25rem;
 }
 
-.responsibilities li{
+.responsibilities li {
   margin-bottom: 0.5rem;
 }
 
-.coursework {
+.coursework,
+.items {
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
@@ -277,7 +281,8 @@ menu a:hover {
   font-size: 1.15rem;
 }
 
-.coursework li {
+.coursework li,
+.items li {
   list-style-type: none;
 }
 
