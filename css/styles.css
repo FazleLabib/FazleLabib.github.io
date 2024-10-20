@@ -198,9 +198,15 @@ menu a:hover {
   padding: 1rem 0;
 }
 
-.tools span{
+.tools span {
   font-size: 1.25rem;
-  padding: 0.25rem 1rem; 
+}
+
+.tools span,
+.employment .type,
+.major .degree,
+.coursework li  {
+  padding: 0.15rem 1rem; 
   border: 1px solid var(--primary-950);
   border-radius: 2rem;
 }
@@ -251,11 +257,8 @@ menu a:hover {
 .employment .type,
 .major .degree {
   margin-left: 0.5rem;
-  padding: 0 1rem;
   font-size: 1.25rem;
   font-weight: 500;
-  border: 1px solid var(--primary-950);
-  border-radius: 2rem;
 }
 
 .responsibilities {
@@ -276,9 +279,6 @@ menu a:hover {
 
 .coursework li {
   list-style-type: none;
-  padding: 0 1rem;
-  border: 1px solid var(--primary-950);
-  border-radius: 2rem;
 }
 
 footer p {
