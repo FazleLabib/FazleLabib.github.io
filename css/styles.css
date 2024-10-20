@@ -222,28 +222,34 @@ menu a:hover {
   font-size: 1.5rem;
 }
 
-#work-experience .header {
+#work-experience .header,
+#education .header {
   display: flex;
   align-items:flex-start;
   justify-content: space-between;
 }
 
-.employment h4 {
+.employment h4,
+.major,
+.university {
   margin: 0;
   margin-bottom: 0.5rem;
 }
 
-.position {
+.position,
+.major {
   font-size: 2rem;
   font-weight: 500;
 }
 
-.company {
+.company,
+.university {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.employment .type {
+.employment .type,
+.major .degree {
   margin-left: 0.5rem;
   padding: 0 1rem;
   font-size: 1.25rem;
@@ -258,6 +264,21 @@ menu a:hover {
 
 .responsibilities li{
   margin-bottom: 0.5rem;
+}
+
+.coursework {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.15rem;
+}
+
+.coursework li {
+  list-style-type: none;
+  padding: 0 1rem;
+  border: 1px solid var(--primary-950);
+  border-radius: 2rem;
 }
 
 footer p {
