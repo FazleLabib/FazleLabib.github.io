@@ -212,7 +212,8 @@ menu a:hover {
   border-radius: 2rem;
 }
 
-.abstract p {
+.abstract p,
+#awards p {
   font-size: 1.25rem;
   text-align: justify;
 }
@@ -239,21 +240,25 @@ menu a:hover {
 .employment h4,
 .major,
 .university,
-.category {
+.category,
+#awards .title,
+#awards .awarding-body {
   margin: 0;
   margin-bottom: 0.5rem;
 }
 
 .position,
 .major,
-.category {
-  font-size: 2rem;
+.category,
+#awards .title {
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .company,
-.university {
-  font-size: 1.5rem;
+.university,
+#awards .awarding-body {
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
