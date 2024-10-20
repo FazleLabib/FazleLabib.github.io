@@ -205,7 +205,8 @@ menu a:hover {
 .tools span,
 .employment .type,
 .major .degree,
-.coursework li  {
+.coursework li,
+.items li  {
   padding: 0.15rem 1rem; 
   border: 1px solid var(--primary-950);
   border-radius: 2rem;
@@ -237,13 +238,15 @@ menu a:hover {
 
 .employment h4,
 .major,
-.university {
+.university,
+.category {
   margin: 0;
   margin-bottom: 0.5rem;
 }
 
 .position,
-.major {
+.major,
+.category {
   font-size: 2rem;
   font-weight: 500;
 }
@@ -269,7 +272,8 @@ menu a:hover {
   margin-bottom: 0.5rem;
 }
 
-.coursework {
+.coursework,
+.items {
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
@@ -277,7 +281,8 @@ menu a:hover {
   font-size: 1.15rem;
 }
 
-.coursework li {
+.coursework li,
+.items li {
   list-style-type: none;
 }
 
