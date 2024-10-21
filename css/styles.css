@@ -323,6 +323,58 @@ menu a:hover {
   color: var(--primary-600);
 }
 
+footer {
+  padding: 2rem;
+  border-top: 1px solid var(--primary-950);
+  display: flex;
+  align-items:last baseline;
+  justify-content: space-between;
+}
+
+#copyright {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#local-time p {
+  margin: 0;
+  font-size: 1.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#local-time span {
+  font-size: 1rem;
+}
+
+#colophon-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+#colophon {
+  font-size: 1.25rem;
+}
+
 footer p {
   margin: 0;
+}
+
+#back-to-top {
+  outline: none;
+  border: none;
+  font-size: 1.25rem;
+  background-color: var(--secondary-100);
+  color: var(--primary-900);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#back-to-top:hover i {
+  transform: translateY(-0.5rem);
+  transition: 0.3s ease;
 }
