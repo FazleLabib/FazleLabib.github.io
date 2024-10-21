@@ -53,6 +53,10 @@
   --primary-950: hsl(0, 0%, 95%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -218,7 +222,7 @@ menu a:hover {
   text-align: justify;
 }
 
-#about-me {
+#about {
   gap: 5rem;
 }
 
