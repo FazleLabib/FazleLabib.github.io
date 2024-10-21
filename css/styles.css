@@ -66,20 +66,20 @@ body {
 }
 
 nav {
+  width: 100%;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  position: fixed;
+  z-index: 2;
 }
 
 #title {
   font-weight: 600;
   background-color: var(--secondary-100);
   color: var(--primary-950);
-  padding: 0.5rem;
   cursor: pointer;
-  margin-left: -2rem;
   padding: 0.5rem 2rem;
 }
 
@@ -87,6 +87,7 @@ menu {
   display: flex;
   margin: 0;
   gap: 1rem;
+  padding-right: 2rem;
 }
 
 menu span {
@@ -94,18 +95,19 @@ menu span {
 }
 
 menu span:hover {
-  transition: 0.2s ease-in-out;
-  background-color: var(--secondary-100);
+  
 }
 
 menu a {
+  padding: 0.5rem;
   font-size: 1rem;
   color: var(--primary-200);
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 menu a:hover {
-  transition: 0.2s ease-in-out;
+  background-color: var(--secondary-100);
   color: var(--primary-900);
 }
 
