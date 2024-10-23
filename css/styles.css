@@ -220,7 +220,7 @@ menu a:hover {
   font-size: var(--font-size-lg);
   font-weight: 400;
   letter-spacing: 0.1rem;
-
+  text-transform: uppercase;
 }
 
 .content {
