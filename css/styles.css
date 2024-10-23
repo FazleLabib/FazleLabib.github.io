@@ -533,7 +533,7 @@ footer p {
   .major .degree,
   .coursework li,
   .items li {
-    padding: 0.15rem 0.75rem;
+    padding: 0.15rem 0.65rem;
   }
 
   .abstract p,
@@ -552,6 +552,11 @@ footer p {
   #bio p {
     font-size: var(--font-size-xs);
     text-align: justify;
+  }
+
+  #education .header {
+    flex-direction: column;
+    padding-bottom: 0.5rem;
   }
 
   .profile-pic img {
