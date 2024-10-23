@@ -308,6 +308,17 @@
       document.getElementById("back-to-top").onclick = function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
       };
+
+      function updateTitle() {
+    if (window.innerWidth <= 768) {
+      document.getElementById('title').innerHTML = 'S. M. F. R. Labib';
+    } else {
+      document.getElementById('title').innerHTML = 'S. M. Fazle Rabby Labib';
+    }
+  }
+
+  window.addEventListener('resize', updateTitle);
+  window.addEventListener('load', updateTitle);
     </script>
   </body>
 </html>
