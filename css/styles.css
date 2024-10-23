@@ -173,10 +173,10 @@ menu a:hover {
 }
 
 .globe {
-  width: 300%;
-  height: 100%;
+  width: 400%;
+  height: 125%;
   display: flex;
-  animation: rotateEarth 7s linear infinite;
+  animation: rotateEarth 10s linear infinite;
   transform-origin: center center;
   transform: rotateX(23.5deg);
 }
