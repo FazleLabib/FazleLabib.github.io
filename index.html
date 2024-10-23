@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>S M Fazle Rabby Labib</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <script
       src="https://kit.fontawesome.com/79324bb819.js"
       crossorigin="anonymous"
@@ -34,13 +38,16 @@
         <div class="subheading">
           <div class="globe-mask">
             <div class="globe">
-              <img src="/images/world.svg" alt="World Map" class="map">
-              <img src="/images/world.svg" alt="World Map" class="map">
+              <img src="/images/world.svg" alt="World Map" class="map" />
+              <img src="/images/world.svg" alt="World Map" class="map" />
             </div>
           </div>
           <div class="divider"></div>
-          <h2>Seeking research collaboration and software engineering opportunities.</h2>
-        </div>            
+          <h2>
+            Seeking research collaboration and software engineering
+            opportunities.
+          </h2>
+        </div>
       </section>
       <section class="container" id="work">
         <div class="type">
@@ -310,15 +317,16 @@
       };
 
       function updateTitle() {
-    if (window.innerWidth <= 768) {
-      document.getElementById('title').innerHTML = 'S. M. F. R. Labib';
-    } else {
-      document.getElementById('title').innerHTML = 'S. M. Fazle Rabby Labib';
-    }
-  }
+        if (window.innerWidth <= 768) {
+          document.getElementById("title").innerHTML = "S. M. F. R. Labib";
+        } else {
+          document.getElementById("title").innerHTML =
+            "S. M. Fazle Rabby Labib";
+        }
+      }
 
-  window.addEventListener('resize', updateTitle);
-  window.addEventListener('load', updateTitle);
+      window.addEventListener("resize", updateTitle);
+      window.addEventListener("load", updateTitle);
     </script>
   </body>
 </html>
