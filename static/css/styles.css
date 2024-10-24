@@ -82,6 +82,10 @@ body {
   color: var(--primary-900);
 }
 
+ul {
+  padding-left: 0;
+}
+
 main {
   overflow-y: auto; 
   height: 100dvh;
@@ -355,6 +359,10 @@ menu a:hover {
   justify-content: space-between;
 }
 
+#work-experience .content ul {
+  padding-left: 1.25rem;
+}
+
 .authors h4,
 .employment h4,
 .major,
@@ -396,8 +404,8 @@ menu a:hover {
   margin-bottom: 0.5rem;
 }
 
-.coursework,
-#skills .items {
+.coursework ul,
+#skills .items ul {
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
@@ -653,8 +661,8 @@ footer p {
     font-size: var(--font-size-xs);
   }
 
-  .coursework,
-  #skills .items {
+  .coursework ul,
+  #skills .items ul {
     gap: 0.5rem;
   }
 
