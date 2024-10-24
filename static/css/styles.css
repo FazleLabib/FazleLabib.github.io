@@ -64,6 +64,11 @@
   --primary-950: hsl(0, 0%, 95%);
 }
 
+html, body {
+  overflow: hidden;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -77,6 +82,11 @@ body {
   color: var(--primary-900);
 }
 
+main {
+  overflow-y: auto; 
+  height: 100dvh;
+}
+
 nav {
   width: 100%;
   background-color: var(--primary-900);
@@ -84,7 +94,52 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  overflow: hidden;
   z-index: 2;
+}
+
+main::-webkit-scrollbar {
+  width: 0.85rem;
+}
+
+main::-webkit-scrollbar-track {
+  background-color: var(--secondary-100);
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: var(--primary-900);
+  border-radius: 0.5rem;
+  border: 3px solid var(--secondary-100);
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-700);
+}
+
+:root[data-theme="light"] main::-webkit-scrollbar-track {
+  background-color: var(--secondary-100);
+}
+
+:root[data-theme="light"] main::-webkit-scrollbar-thumb {
+  background-color: var(--primary-900);
+  border: 3px solid var(--secondary-100);
+}
+
+:root[data-theme="light"] main::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-700);
+}
+
+:root[data-theme="dark"] main::-webkit-scrollbar-track {
+  background-color: var(--secondary-800);
+}
+
+:root[data-theme="dark"] main::-webkit-scrollbar-thumb {
+  background-color: var(--primary-200);
+  border: 3px solid var(--secondary-800);
+}
+
+:root[data-theme="dark"] main::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-300);
 }
 
 #title {
@@ -443,6 +498,15 @@ footer p {
 }
 
 @media only screen and (max-width: 768px) {
+
+  html, body {
+    overflow: auto;
+  }
+
+  main {
+    overflow-y: hidden; 
+    height: auto;
+  }
   #title {
     width: 100%;
     font-size: var(--font-size-xxs);
