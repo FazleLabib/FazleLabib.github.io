@@ -65,7 +65,6 @@
 }
 
 html, body {
-  overflow: hidden;
   margin: 0;
 }
 
@@ -87,9 +86,12 @@ ul {
 }
 
 main {
-  overflow-y: auto; 
-  height: 100dvh;
   padding: 0 2rem;
+}
+
+.page-wrapper {
+  height: 100dvh;
+  overflow-y: auto;
 }
 
 nav {
@@ -103,47 +105,47 @@ nav {
   z-index: 2;
 }
 
-main::-webkit-scrollbar {
+.page-wrapper::-webkit-scrollbar {
   width: 0.85rem;
 }
 
-main::-webkit-scrollbar-track {
+.page-wrapper::-webkit-scrollbar-track {
   background-color: var(--secondary-100);
 }
 
-main::-webkit-scrollbar-thumb {
+.page-wrapper::-webkit-scrollbar-thumb {
   background-color: var(--primary-900);
   border-radius: 0.5rem;
   border: 3px solid var(--secondary-100);
 }
 
-main::-webkit-scrollbar-thumb:hover {
+.page-wrapper::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-700);
 }
 
-:root[data-theme="light"] main::-webkit-scrollbar-track {
+:root[data-theme="light"] .page-wrapper::-webkit-scrollbar-track {
   background-color: var(--secondary-100);
 }
 
-:root[data-theme="light"] main::-webkit-scrollbar-thumb {
+:root[data-theme="light"] .page-wrapper::-webkit-scrollbar-thumb {
   background-color: var(--primary-900);
   border: 3px solid var(--secondary-100);
 }
 
-:root[data-theme="light"] main::-webkit-scrollbar-thumb:hover {
+:root[data-theme="light"] .page-wrapper::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-700);
 }
 
-:root[data-theme="dark"] main::-webkit-scrollbar-track {
+:root[data-theme="dark"] .page-wrapper::-webkit-scrollbar-track {
   background-color: var(--secondary-800);
 }
 
-:root[data-theme="dark"] main::-webkit-scrollbar-thumb {
+:root[data-theme="dark"] .page-wrapper::-webkit-scrollbar-thumb {
   background-color: var(--primary-200);
   border: 3px solid var(--secondary-800);
 }
 
-:root[data-theme="dark"] main::-webkit-scrollbar-thumb:hover {
+:root[data-theme="dark"] .page-wrapper::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary-300);
 }
 
@@ -455,6 +457,7 @@ footer {
   display: flex;
   align-items: last baseline;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 #copyright {
@@ -508,13 +511,16 @@ footer p {
 @media only screen and (max-width: 768px) {
 
   html, body {
-    overflow: auto;
+    overflow: visible;
   }
 
   main {
-    overflow-y: hidden; 
-    height: auto;
     padding: 0 1rem;
+  }
+
+  .page-wrapper {
+    height: auto;
+    overflow-y: visible;
   }
 
   #title {
