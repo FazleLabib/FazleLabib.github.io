@@ -85,6 +85,7 @@ body {
 main {
   overflow-y: auto; 
   height: 100dvh;
+  padding: 0 2rem;
 }
 
 nav {
@@ -179,7 +180,7 @@ menu a:hover {
 #hero {
   display: flex;
   align-items: flex-end;
-  padding: 20rem 2rem;
+  padding: 20rem 0;
 }
 
 #hero .heading {
@@ -262,7 +263,7 @@ menu a:hover {
 .container {
   border-top: 1px solid var(--primary-950);
   display: flex;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .type {
@@ -280,7 +281,6 @@ menu a:hover {
 
 .content {
   width: 100%;
-  padding: 0 1rem;
 }
 
 .title-date {
@@ -506,7 +506,9 @@ footer p {
   main {
     overflow-y: hidden; 
     height: auto;
+    padding: 0 1rem;
   }
+
   #title {
     width: 100%;
     font-size: var(--font-size-xxs);
@@ -531,7 +533,7 @@ footer p {
     flex-direction: column;
     align-items: normal;
     justify-content: center;
-    padding: 5rem 1rem;
+    padding: 5rem 0;
     gap: 1rem;
   }
 
@@ -559,7 +561,7 @@ footer p {
 
   .container {
     flex-direction: column;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .type {
