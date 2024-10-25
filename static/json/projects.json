@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Traffic Sign Classifier",
+    "date": "October 2024",
+    "tools": ["Python", "Django", "HTML", "CSS", "JavaScript"],
+    "image": "static/media/project-1.png",
+    "link": "https://github.com/FazleLabib/TrafficSignClassifier",
+    "alt": "Traffic Sign Classifier Project Image"
+  }
+]

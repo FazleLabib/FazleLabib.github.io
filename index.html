@@ -54,27 +54,7 @@
           <div class="type">
             <h3>Projects</h3>
           </div>
-          <div class="content">
-            <div class="title-date">
-              <h3 class="title">Traffic Sign Classifier</h3>
-              <div class="date">October 2024</div>
-            </div>
-            <div class="tools">
-              <span>Python</span>
-              <span>Django</span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
-            <div class="project-image">
-              <a href="https://github.com/FazleLabib/TrafficSignClassifier">
-                <img
-                  src="static/media/project-1.png"
-                  alt="Traffic Sign Classifier Project Image"
-                />
-              </a>
-            </div>
-          </div>
+          <!-- Project Data -->
         </section>
         <section class="container">
           <div class="type">
@@ -294,6 +274,59 @@
     </div>
 
     <script>
+      async function fetchAndRenderContent(
+        jsonPath,
+        containerId,
+        templateFunction
+      ) {
+        try {
+          const response = await fetch(jsonPath);
+          const data = await response.json();
+          const container = document.getElementById(containerId);
+
+          let contentsDiv = container.querySelector(".contents");
+          if (!contentsDiv) {
+            contentsDiv = document.createElement("div");
+            contentsDiv.classList.add("contents");
+            container.appendChild(contentsDiv);
+          }
+
+          data.forEach((item) => {
+            contentsDiv.appendChild(templateFunction(item));
+          });
+        } catch (error) {
+          console.error(`Error loading content for ${containerId}:`, error);
+        }
+      }
+
+      function projectTemplate(project) {
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
+        contentDiv.innerHTML = `
+        <div class="title-date">
+          <h3 class="title">${project.title}</h3>
+          <div class="date">${project.date}</div>
+        </div>
+        <div class="tools">
+          ${project.tools.map((tool) => `<span>${tool}</span>`).join("")}
+        </div>
+        <div class="project-image">
+          <a href="${project.link}">
+            <img src="${project.image}" alt="${project.alt}" />
+          </a>
+        </div>
+        `;
+        return contentDiv;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetchAndRenderContent(
+          "static/json/projects.json",
+          "work",
+          projectTemplate
+        );
+      });
+
       function updateTime() {
         const now = new Date();
         const options = {
