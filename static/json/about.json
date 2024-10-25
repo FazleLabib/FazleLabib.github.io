@@ -1,0 +1,8 @@
+{
+  "about": {
+      "title": "About me",
+      "article": "Recent graduate with a B.Sc. in Computer Science and Engineering, possessing strong programming skills in Python and a passion for artificial intelligence and data science. My expertise lies in computer vision and adversarial attacks, with a keen interest in human-computer interaction.",
+      "profileImage": "static/media/profile-pic.jpg",
+      "imageAlt": "Profile picture of S. M. Fazle Rabby Labib"
+  }
+}

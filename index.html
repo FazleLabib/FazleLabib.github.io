@@ -89,16 +89,10 @@
         <section class="container" id="about">
           <div id="bio">
             <h3 class="title">About me</h3>
-            <p>
-              Recent graduate with a B.Sc. in Computer Science and Engineering,
-              possessing strong programming skills in Python and a passion for
-              artificial intelligence and data science. My expertise lies in
-              computer vision and adversarial attacks, with a keen interest in
-              human-computer interaction.
-            </p>
+            <p id="article-content"></p>
           </div>
           <div class="profile-pic" id="about-image">
-            <img src="static/media/profile-pic.jpg" alt="Profile picture" />
+            <img id="profile-image" alt="Profile picture" />
           </div>
         </section>
         <section class="container" id="work-experience">
@@ -313,6 +307,20 @@
         return contentDiv;
       }
 
+      async function loadAboutContent() {
+        try {
+          const response = await fetch("static/json/about.json");
+          const data = await response.json();
+
+          document.getElementById("article-content").textContent =
+            data.about.article;
+          document.getElementById("profile-image").src =
+            data.about.profileImage;
+        } catch (error) {
+          console.error("Error loading content:", error);
+        }
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         fetchAndRenderContent(
           "static/json/projects.json",
@@ -324,6 +332,7 @@
           "research",
           researchTemplate
         );
+        loadAboutContent();
       });
 
       function updateTime() {
