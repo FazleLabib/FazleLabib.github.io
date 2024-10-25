@@ -99,44 +99,7 @@
           <div class="type">
             <h3>Work Experience</h3>
           </div>
-          <div class="content">
-            <div class="header">
-              <div class="employment">
-                <h4 class="position">Software Engineer</h4>
-                <h4 class="company">
-                  BNX Networks<span class="type">Full Time</span>
-                </h4>
-              </div>
-              <div class="date">2024 - Present</div>
-            </div>
-            <div class="responsibilities">
-              <ul>
-                <li>
-                  Contributed to the development of a comprehensive employee
-                  surveillance and control centre using .NET Core and MySQL.
-                </li>
-                <li>
-                  Collaborated with team members to design and implement a
-                  robust dashboard feature, enabling centralized management of
-                  security and data protection measures.
-                </li>
-                <li>
-                  Designed and developed scalable databases tailored to meet the
-                  precise needs of the software and optimized query performance
-                  to enhance overall software functionality and user experience.
-                </li>
-                <li>
-                  Created detailed technical documentation to support ongoing
-                  maintenance and future development.
-                </li>
-                <li>
-                  Conducted thorough code reviews, performed code refactoring,
-                  and optimized existing code to improve performance and
-                  maintainability.
-                </li>
-              </ul>
-            </div>
-          </div>
+          <!-- Work Experience Data -->
         </section>
         <section class="container" id="education">
           <div class="type">
@@ -321,6 +284,28 @@
         }
       }
 
+      function workExperienceTemplate(workExperience) {
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
+        contentDiv.innerHTML = `
+        <div class="header">
+              <div class="employment">
+                <h4 class="position">${workExperience.position}</h4>
+                <h4 class="company">
+                  ${workExperience.company}<span class="type">${workExperience.type}</span>
+                </h4>
+              </div>
+              <div class="date">${workExperience.date}</div>
+            </div>
+            <div class="responsibilities">
+              <ul>
+                ${workExperience.responsibilities.map((responsibility) => `<li>${responsibility}</li>`).join("")}
+              </ul>
+          </div>
+        `;
+        return contentDiv;
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         fetchAndRenderContent(
           "static/json/projects.json",
@@ -333,6 +318,11 @@
           researchTemplate
         );
         loadAboutContent();
+        fetchAndRenderContent(
+          "static/json/work-experience.json",
+          "work-experience",
+          workExperienceTemplate
+        );
       });
 
       function updateTime() {
