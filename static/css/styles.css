@@ -319,7 +319,9 @@ menu a:hover {
 }
 
 .tools {
+  display: flex;
   padding: 1rem 0;
+  gap: 0.5rem;
 }
 
 .tools span {
@@ -604,6 +606,10 @@ footer p {
     border-radius: 0.5rem;
   }
 
+  .tools {
+    gap: 0.25rem;
+  }
+  
   .tools span {
     font-size: var(--font-size-xxs);
   }
