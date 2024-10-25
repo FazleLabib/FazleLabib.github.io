@@ -80,60 +80,11 @@
           </div>
           <!-- Project Data -->
         </section>
-        <section class="container">
+        <section class="container" id="research">
           <div class="type">
             <h3>Research</h3>
           </div>
-          <div class="content">
-            <div class="title-date">
-              <h3 class="title">
-                Tailoring Adversarial Attacks on Deep Neural Networks for
-                Targeted Class Manipulation Using DeepFool Algorithm
-              </h3>
-              <div class="date">2023</div>
-            </div>
-            <div class="authors">
-              <h4>
-                S. M. Fazle Rabby Labib, Joyanta Jyoti Mondal, Meem Arafat
-                Manab, Sarfaraz Newaz, Xi Xiao
-              </h4>
-            </div>
-            <div class="abstract">
-              <p>
-                The susceptibility of deep neural networks (DNNs) to adversarial
-                attacks undermines their reliability across numerous
-                applications, underscoring the necessity for an in-depth
-                exploration of these vulnerabilities and the formulation of
-                robust defense strategies. The DeepFool algorithm by
-                Moosavi-Dezfooli et al. (2016) represents a pivotal step in
-                identifying minimal perturbations required to induce
-                misclassification of input images. Nonetheless, its generic
-                methodology falls short in scenarios necessitating targeted
-                interventions. Additionally, previous research studies have
-                predominantly concentrated on the success rate of attacks
-                without adequately addressing the consequential distortion of
-                images, the maintenance of image quality, or the confidence
-                threshold required for misclassification. To bridge these gaps,
-                we introduce the Enhanced Targeted DeepFool (ET DeepFool)
-                algorithm, an evolution of DeepFool that not only facilitates
-                the specification of desired misclassification targets but also
-                incorporates a configurable minimum confidence score. Our
-                empirical investigations demonstrate the superiority of this
-                refined approach in maintaining the integrity of images and
-                minimizing perturbations across a variety of DNN architectures.
-                Unlike previous iterations, such as the Targeted DeepFool by
-                Gajjar et al. (2022), our method grants unparalleled control
-                over the perturbation process, enabling precise manipulation of
-                model responses. Preliminary outcomes reveal that certain
-                models, including AlexNet and the advanced Vision Transformer,
-                display commendable robustness to such manipulations. This
-                discovery of varying levels of model robustness, as unveiled
-                through our confidence level adjustments, could have
-                far-reaching implications for the field of image recognition.
-                Our code will be made public upon acceptance of the paper.
-              </p>
-            </div>
-          </div>
+          <!-- Research data -->
         </section>
         <section class="container" id="about">
           <div id="bio">
@@ -344,11 +295,34 @@
         return contentDiv;
       }
 
+      function researchTemplate(research) {
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
+        contentDiv.innerHTML = `
+    <div class="title-date">
+      <h3 class="title">${research.title}</h3>
+      <div class="date">${research.date}</div>
+    </div>
+    <div class="authors">
+      <h4>${research.authors}</h4>
+    </div>
+    <div class="abstract">
+      <p>${research.abstract}</p>
+    </div>
+  `;
+        return contentDiv;
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         fetchAndRenderContent(
           "static/json/projects.json",
           "work",
           projectTemplate
+        );
+        fetchAndRenderContent(
+          "static/json/research.json",
+          "research",
+          researchTemplate
         );
       });
 
