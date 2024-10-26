@@ -36,6 +36,8 @@
   --primary-800: hsl(60, 2%, 20%);
   --primary-900: hsl(60, 2%, 10%);
   --primary-950: hsl(0, 0%, 5%);
+
+  --filter: invert(0);
 }
 
 :root[data-theme="dark"] {
@@ -62,6 +64,8 @@
   --primary-800: hsl(60, 2%, 80%);
   --primary-900: hsl(60, 2%, 90%);
   --primary-950: hsl(0, 0%, 95%);
+
+  --filter: invert(85%);
 }
 
 html, body {
@@ -241,6 +245,7 @@ menu a:hover {
   animation: rotateEarth 10s linear infinite;
   transform-origin: center center;
   transform: rotateX(23.5deg);
+  filter: var(--filter);
 }
 
 .map {
