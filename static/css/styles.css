@@ -197,7 +197,7 @@ menu a:hover {
 }
 
 .heading h1 {
-  font-size: var(--font-size-xxxl);
+  font-size: clamp(var(--font-size-lg), 3.5vw, var(--font-size-xxxl));
   margin: 0;
   font-weight: 600;
 }
