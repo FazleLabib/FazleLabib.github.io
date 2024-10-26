@@ -111,22 +111,7 @@
           <div class="type">
             <h3>Skills</h3>
           </div>
-          <div class="content">
-            <div class="header">
-              <h4 class="category">Programming Languages</h4>
-            </div>
-            <div class="items">
-              <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>C</li>
-                <li>C#</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>SQL</li>
-              </ul>
-            </div>
-          </div>
+          <!-- Skills Data -->
         </section>
         <section class="container" id="awards">
           <div class="type">
@@ -307,6 +292,22 @@
         return contentDiv;
       }
 
+      function skillsTemplate(skills) {
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
+        contentDiv.innerHTML = `
+        <div class="header">
+          <h4 class="category">${skills.category}</h4>
+        </div>
+        <div class="items">
+          <ul>
+            ${skills.items.map((item) => `<li>${item}</li>`).join("")}
+          </ul>
+        </div>
+        `;
+        return contentDiv;
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         fetchAndRenderContent(
           "static/json/projects.json",
@@ -328,6 +329,11 @@
           "static/json/education.json",
           "education",
           educationTemplate
+        );
+        fetchAndRenderContent(
+          "static/json/skills.json",
+          "skills",
+          skillsTemplate
         );
       });
 
