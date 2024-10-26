@@ -1,0 +1,17 @@
+[
+  {
+    "icon": "fa-regular fa-envelope",
+    "link": "mailto:fazle.labib@gmail.com",
+    "linkText": "fazle.labib@gmail.com"
+  },
+  {
+    "icon": "fa-brands fa-linkedin-in",
+    "link": "https://www.linkedin.com/in/fazlelabib/",
+    "linkText": "in/fazlelabib"
+  },
+  {
+    "icon": "fa-brands fa-github",
+    "link": "https://github.com/FazleLabib",
+    "linkText": "@FazleLabib"
+  }
+]
