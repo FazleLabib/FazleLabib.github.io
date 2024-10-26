@@ -117,15 +117,7 @@
           <div class="type">
             <h3>Awards & Recognitions</h3>
           </div>
-          <div class="content">
-            <div class="header">
-              <h4 class="title">Merit Scholarship</h4>
-              <h4 class="awarding-body">BRAC University</h4>
-            </div>
-            <p class="description">
-              Awarded up to 75% scholarship from the 3rd semester and onwards
-            </p>
-          </div>
+          <!-- Awards Data -->
         </section>
         <section class="container" id="contact">
           <div class="type">
@@ -308,6 +300,19 @@
         return contentDiv;
       }
 
+      function awardsTemplate(awards) {
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
+        contentDiv.innerHTML = `
+        <div class="header">
+          <h4 class="title">${awards.title}</h4>
+          <h4 class="awarding-body">${awards.awardingBody}</h4>
+        </div>
+        <p class="description">${awards.description}</p>
+        `;
+        return contentDiv;
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         fetchAndRenderContent(
           "static/json/projects.json",
@@ -334,6 +339,11 @@
           "static/json/skills.json",
           "skills",
           skillsTemplate
+        );
+        fetchAndRenderContent(
+          "static/json/awards.json",
+          "awards",
+          awardsTemplate
         );
       });
 
