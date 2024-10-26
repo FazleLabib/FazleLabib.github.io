@@ -105,28 +105,7 @@
           <div class="type">
             <h3>Education</h3>
           </div>
-          <div class="content">
-            <div class="header">
-              <div class="degree-info">
-                <h4 class="major">
-                  Computer Science & Engineering <span class="degree">BSc</span>
-                </h4>
-                <h4 class="university">BRAC University</h4>
-              </div>
-              <div class="date">2019 - 2023</div>
-            </div>
-            <div class="coursework">
-              <ul>
-                <li>Data Structures</li>
-                <li>Algorithms</li>
-                <li>Computer Architecture</li>
-                <li>Database Systems</li>
-                <li>Artificial Intelligence</li>
-                <li>Data Science</li>
-                <li>Simulation and Modeling</li>
-              </ul>
-            </div>
-          </div>
+          <!-- Education Data -->
         </section>
         <section class="container" id="skills">
           <div class="type">
@@ -306,6 +285,28 @@
         return contentDiv;
       }
 
+      function educationTemplate(education) {
+        const contentDiv = document.createElement("div");
+        contentDiv.classList.add("content");
+        contentDiv.innerHTML = `
+        <div class="header">
+              <div class="degree-info">
+                <h4 class="major">
+                  ${education.major} <span class="degree">${education.degree}</span>
+                </h4>
+                <h4 class="university">${education.university}</h4>
+              </div>
+              <div class="date">${education.date}</div>
+            </div>
+            <div class="coursework">
+              <ul>
+                ${education.coursework.map((course) => `<li>${course}</li>`).join("")}
+              </ul>
+            </div>
+        `;
+        return contentDiv;
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         fetchAndRenderContent(
           "static/json/projects.json",
@@ -322,6 +323,11 @@
           "static/json/work-experience.json",
           "work-experience",
           workExperienceTemplate
+        );
+        fetchAndRenderContent(
+          "static/json/education.json",
+          "education",
+          educationTemplate
         );
       });
 
