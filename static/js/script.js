@@ -1,3 +1,14 @@
+function updateTitle() {
+  if (window.innerWidth <= 768) {
+    document.getElementById("title").innerHTML = "S. M. F. R. Labib";
+  } else {
+    document.getElementById("title").innerHTML = "S. M. Fazle Rabby Labib";
+  }
+}
+
+window.addEventListener("resize", updateTitle);
+window.addEventListener("load", updateTitle);
+
 async function fetchAndRenderContent(jsonPath, containerId, templateFunction) {
   try {
     const response = await fetch(jsonPath);
@@ -209,26 +220,22 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-window.onscroll = function () {
-  const button = document.getElementById("back-to-top");
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    button.style.display = "block";
-  } else {
-    button.style.display = "none";
-  }
-};
-
-document.getElementById("back-to-top").onclick = function () {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-function updateTitle() {
-  if (window.innerWidth <= 768) {
-    document.getElementById("title").innerHTML = "S. M. F. R. Labib";
-  } else {
-    document.getElementById("title").innerHTML = "S. M. Fazle Rabby Labib";
-  }
+function setTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  document.getElementById("toggle-light").classList.toggle("active", theme === "light");
+  document.getElementById("toggle-dark").classList.toggle("active", theme === "dark");
 }
 
-window.addEventListener("resize", updateTitle);
-window.addEventListener("load", updateTitle);
+function initTheme() {
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const theme = systemPrefersDark ? "dark" : "light";
+  setTheme(theme);
+}
+
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+  const newTheme = e.matches ? "dark" : "light";
+  setTheme(newTheme);
+});
+
+document.addEventListener("DOMContentLoaded", initTheme);

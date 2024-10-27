@@ -83,6 +83,7 @@ body {
   font-family: "Afacad Flux", sans-serif;
   background-color: var(--secondary-100);
   color: var(--primary-900);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ul {
@@ -496,7 +497,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 #colophon {
@@ -520,6 +521,26 @@ footer p {
 #back-to-top:hover i {
   transform: translateY(-0.5rem);
   transition: 0.3s ease;
+}
+
+.theme {
+  display: flex;
+  font-size: var(--font-size-xxs);
+  border: none;
+  cursor: pointer;
+}
+
+.toggle {
+  border: 1px solid var(--secondary-900);
+  padding: 0.15rem 1rem;
+  color: hsl(60, 2%, 10%);
+  background-color: hsl(60, 10%, 90%);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle.active {
+  background-color: hsl(60, 2%, 10%);
+  color: hsl(60, 10%, 90%);
 }
 
 @media only screen and (max-width: 1080px) {
@@ -732,7 +753,6 @@ footer p {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 0.65rem;
   }
 
   #colophon {
