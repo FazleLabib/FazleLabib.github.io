@@ -2,13 +2,62 @@
   {
     "category": "Programming Languages",
     "items": [
-              "Python", 
-              "Java", 
-              "C", 
-              "C#", 
-              "HTML",
-              "CSS",
-              "SQL"
-            ]
+      "Python",
+      "Java",
+      "C",
+      "C#",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL"
+    ]
+  },
+  {
+    "category": "Frameworks",
+    "items": [
+      ".NET Core",
+      ".NET Framework",
+      "ASP.NET Core",
+      "Django",
+      "Laravel"
+    ]
+  },
+  {
+    "category": "Libraries",
+    "items": [
+      "PyTorch",
+      "Pandas",
+      "Matplotlib",
+      "NumPy",
+      "OpenGL",
+      "Seaborn",
+      "Scikit-learn"
+    ]
+  },
+  {
+    "category": "Developer Tools",
+    "items": [
+      "Git",
+      "Visual Studio",
+      "Visual Studio Code",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "category": "Software",
+    "items": [
+      "VirtualBox",
+      "draw.io",
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe XD",
+      "Adobe Premiere Pro"
+    ]
+  },
+  {
+    "category": "Technical Writing Tool",
+    "items": [
+      "Latex"
+    ]
   }
 ]
