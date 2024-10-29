@@ -86,14 +86,16 @@ function workExperienceTemplate(workExperience) {
   contentDiv.innerHTML = `
   <div class="header">
         <div class="employment">
-          <h4 class="position">${workExperience.position}</h4>
+          <div class="position-date">
+            <h4 class="position">${workExperience.position}</h4>
+            <div class="date">${workExperience.date}</div>
+          </div>
           <h4 class="company">
             ${workExperience.company}<span class="type">${
     workExperience.type
   }</span>
           </h4>
         </div>
-        <div class="date">${workExperience.date}</div>
       </div>
       <div class="responsibilities">
         <ul>

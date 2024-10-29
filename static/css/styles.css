@@ -351,6 +351,17 @@ menu a:hover {
   border-radius: 2rem;
 }
 
+.employment {
+  width: 100%;
+}
+
+.position-date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
 .abstract p,
 #awards p {
   font-size: var(--font-size-sm);
@@ -381,7 +392,6 @@ menu a:hover {
 }
 
 .authors h4,
-.employment h4,
 .major,
 .university,
 .category,
@@ -389,6 +399,10 @@ menu a:hover {
 #awards .awarding-body {
   margin: 0;
   margin-bottom: 0.5rem;
+}
+
+.employment h4 {
+  margin: 0;
 }
 
 .position,
