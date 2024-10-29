@@ -11,5 +11,24 @@
                           "Created detailed technical documentation to support ongoing maintenance and future development.", 
                           "Conducted thorough code reviews, performed code refactoring, and optimized existing code to improve performance and maintainability."
                         ]
+  },
+  {
+    "position": "Graphic Designer",
+    "company": "Clementine Data Solutions, Shadhin Fintech",
+    "type": "Part Time",
+    "date": "2022 - 2024",
+    "responsibilities": [
+                          "Designed content for social media and company events.",
+                          "Designed UI elements and icons for the Shadhin and DataDash app and websites."
+                        ]
+  },
+  {
+    "position": "Visualizer",
+    "company": "Mindscape Communication",
+    "type": "Part Time",
+    "date": "2020 - 2021",
+    "responsibilities": [
+                          "Created content for different platforms and social media apps for brands like Toffee, Peakward, Autoguard, British American Tobacco, and BRAC."
+                        ]
   }
 ]
