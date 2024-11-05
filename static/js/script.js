@@ -43,7 +43,7 @@ function projectTemplate(project) {
   </div>
   <div class="project-image">
     <a href="${project.link}">
-      <img src="${project.image}" alt="${project.alt}" />
+      <img src="${project.image}" alt="${project.alt}" loading="lazy"/>
     </a>
   </div>
   `;
