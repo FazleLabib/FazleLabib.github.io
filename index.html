@@ -112,7 +112,7 @@
 
     <footer>
       <div id="copyright">
-        <span>&copy; 2024 S. M. Fazle Rabby Labib.</span>
+        <span>&copy; <span id="year"></span> S. M. Fazle Rabby Labib.</span>
         <span>All rights reserved.</span>
       </div>
       <div id="local-time">
@@ -126,11 +126,14 @@
           <span class="toggle" id="toggle-dark" onclick="setTheme('dark')">Dark</span>
         </div>
       </div>
-
     </footer>
+    
   </div>
   <script src="https://kit.fontawesome.com/79324bb819.js" crossorigin="anonymous"></script>
   <script src="static/js/script.js" type="text/javascript"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 
 </html>
