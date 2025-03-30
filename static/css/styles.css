@@ -275,6 +275,7 @@ menu a:hover {
 }
 
 .profile-pic img {
+  max-width: 40rem;
   border-radius: 1rem;
 }
 
