@@ -115,7 +115,6 @@ nav {
   z-index: 2;
 }
 
-
 .page-wrapper::-webkit-scrollbar {
   width: 0.85rem;
 }
@@ -162,11 +161,11 @@ nav {
 
 #title {
   font-weight: 600;
-  background-color: var(--secondary-100);
-  color: var(--primary-950);
+  color: var(--secondary-100);
   cursor: pointer;
   padding: 0.5rem 2rem;
   font-size: var(--font-size-md);
+  transition: all 0.3s ease-in-out;
 }
 
 menu {
@@ -189,7 +188,7 @@ menu a {
   transition: all 0.3s ease-in-out;
 }
 
-menu a:hover {
+#title:hover, menu a:hover {
   background-color: var(--secondary-100);
   color: var(--primary-900);
 }
@@ -197,6 +196,7 @@ menu a:hover {
 #hero {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   padding: 20rem 0;
 }
 
