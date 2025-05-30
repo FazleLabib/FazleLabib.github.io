@@ -195,43 +195,31 @@ menu a {
 
 #hero {
   display: flex;
-  align-items: flex-end;
+  gap: 2rem;
+  align-items: center;
   justify-content: space-between;
-  padding: 20rem 0;
+  margin: 5rem 0;
 }
 
-#hero .heading {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.heading h1 {
-  font-size: clamp(var(--font-size-lg), 3.5vw, var(--font-size-xxxl));
-  margin: 0;
-  font-weight: 600;
+#article-content {
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .subheading {
+  width: max-content;
   display: flex;
   align-items: center;
   border: 1px solid var(--primary-900);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
   gap: 1rem;
 }
 
-.subheading h2 {
-  width: 30ch;
-  margin: 0;
-  font-size: var(--font-size-md);
-  font-weight: 500;
-}
-
 .divider {
   border-left: 1px solid var(--primary-900);
-  height: 5rem;
+  height: 6.5rem;
   margin: -0.5rem 0;
 }
 
@@ -289,8 +277,7 @@ menu a {
   width: 35%;
 }
 
-.type h3,
-#about .title {
+.type h3 {
   margin: 0;
   font-size: var(--font-size-lg);
   font-weight: 400;
@@ -373,10 +360,6 @@ menu a {
 #awards p {
   font-size: var(--font-size-sm);
   text-align: justify;
-}
-
-#about {
-  gap: 5rem;
 }
 
 #bio h3 {
@@ -603,10 +586,8 @@ footer p {
 
   #hero {
     flex-direction: column;
-    align-items: normal;
-    justify-content: center;
-    padding: 5rem 0;
-    gap: 1rem;
+    align-items: center;
+    margin: 2rem 0;
   }
 
   #hero .heading {
@@ -614,13 +595,20 @@ footer p {
     align-items: normal;
   }
 
-  .heading h1 {
-    font-size: var(--font-size-lg);
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #article-content {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    text-align: justify;
   }
 
   .subheading h2 {
-    width: 32ch;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
   }
 
   .globe-mask {
@@ -641,8 +629,7 @@ footer p {
     margin-bottom: 1rem;
   }
 
-  .type h3,
-  #about .title {
+  .type h3 {
     font-size: var(--font-size-md);
   }
 
@@ -685,10 +672,6 @@ footer p {
   .abstract p,
   #awards p {
     font-size: var(--font-size-xs);
-  }
-
-  #about {
-    gap: 1rem;
   }
 
   #bio h3 {
