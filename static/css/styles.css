@@ -309,6 +309,17 @@ menu a {
   margin-bottom: 0.5rem;
 }
 
+.publication {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.publication .link {
+  text-decoration: none;
+  color: var(--primary-900);
+}
+
 .date {
   font-size: var(--font-size-sm);
 }
@@ -339,7 +350,8 @@ menu a {
 .employment .type,
 .major .degree,
 .coursework li,
-.items li {
+.items li,
+.publication .publisher {
   padding: 0.15rem 1rem;
   border: 1px solid var(--primary-950);
   border-radius: 2rem;

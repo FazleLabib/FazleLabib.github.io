@@ -58,6 +58,12 @@ function researchTemplate(research) {
     <h3 class="title">${research.title}</h3>
     <div class="date">${research.date}</div>
   </div>
+  <div class="publication">
+    <h3 class="publisher">${research.publisher}</h3>
+    <a class="link" href="${research.link}" target="_blank" rel="noopener noreferrer" title="View Link">
+    <i class="fas fa-link"></i>
+    </a>
+  </div>
   <div class="authors">
     <h4>${research.authors}</h4>
   </div>
