@@ -1,17 +1,9 @@
 [
   {
+    "universityMonogram": "/static/media/bracu-monogram.svg",
     "major": "Computer Science & Engineering",
     "degree": "BSc",
     "university": "BRAC University",
-    "date": "2019 - 2023",
-    "coursework": [
-                    "Data Structures", 
-                    "Algorithms", 
-                    "Computer Architecture", 
-                    "Database Systems", 
-                    "Artificial Intelligence",
-                    "Data Science",
-                    "Simulation and Modeling"
-                  ]
+    "date": "2019 - 2023"
   }
 ]

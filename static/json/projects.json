@@ -1,8 +1,25 @@
 [
   {
+    "title": "Mic Stream",
+    "date": "April 2025",
+    "tools": [
+      "Flutter",
+      ".NET Framework"
+    ],
+    "image": "static/media/project-MicStream.jpg",
+    "link": "https://github.com/FazleLabib/mic-stream",
+    "alt": "Mic Stream Project Image"
+  },
+  {
     "title": "Traffic Sign Classifier",
     "date": "October 2024",
-    "tools": ["Python", "Django", "HTML", "CSS", "JavaScript"],
+    "tools": [
+      "Python",
+      "Django",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "image": "static/media/project-TrafficSignClassifier.png",
     "link": "https://github.com/FazleLabib/TrafficSignClassifier",
     "alt": "Traffic Sign Classifier Project Image"
@@ -10,17 +27,13 @@
   {
     "title": "IP Address Tracker",
     "date": "November 2023",
-    "tools": ["HTML", "CSS", "JavaScript"],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "image": "static/media/project-IPAddressTracker.png",
     "link": "https://github.com/FazleLabib/frontend-mentor-ip-address-tracker",
     "alt": "IP Address Tracker Project Image"
-  },
-  {
-    "title": "Good Games",
-    "date": "November 2022",
-    "tools": ["HTML", "CSS", "PHP", "Laravel", "MySQL"],
-    "image": "static/media/project-GoodGames.jpg",
-    "link": "https://github.com/FazleLabib/goodgames",
-    "alt": "Good Games Project Image"
   }
 ]

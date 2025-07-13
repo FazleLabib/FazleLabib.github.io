@@ -1,17 +1,27 @@
 [
   {
-    "icon": "fa-regular fa-envelope",
+    "title": "Email",
     "link": "mailto:fazle.labib@gmail.com",
-    "linkText": "fazle.labib@gmail.com"
+    "icon": "fas fa-envelope"
   },
   {
-    "icon": "fa-brands fa-linkedin-in",
-    "link": "https://www.linkedin.com/in/fazlelabib/",
-    "linkText": "in/fazlelabib"
-  },
-  {
-    "icon": "fa-brands fa-github",
+    "title": "GitHub",
     "link": "https://github.com/FazleLabib",
-    "linkText": "@FazleLabib"
+    "icon": "fab fa-github"
+  },
+  {
+    "title": "LinkedIn",
+    "link": "https://linkedin.com/in/fazleLabib",
+    "icon": "fab fa-linkedin"
+  },
+  {
+    "title": "Google Scholar",
+    "link": "https://scholar.google.com/citations?user=_hCXGm0AAAAJ&hl",
+    "icon": "ai ai-google-scholar"
+  },
+  {
+    "title": "Curriculam Vitae",
+    "link": "https://drive.google.com/file/d/1WfTBFo-7T2vEBJHW5t4w8LgCLOgAZtbZ/preview",
+    "icon": "ai ai-cv"
   }
 ]

@@ -4,31 +4,20 @@
     "company": "BNX Networks",
     "type": "Full Time",
     "date": "2024 - Present",
-    "responsibilities": [
-                          "Contributed to the development of a comprehensive employee surveillance and control centre using .NET Core and MySQL.",
-                          "Collaborated with team members to design and implement a robust dashboard feature, enabling centralized management of security and data protection measures.", 
-                          "Designed and developed scalable databases tailored to meet the precise needs of the software and optimized query performance to enhance overall software functionality and user experience.", 
-                          "Created detailed technical documentation to support ongoing maintenance and future development.", 
-                          "Conducted thorough code reviews, performed code refactoring, and optimized existing code to improve performance and maintainability."
-                        ]
+    "logo": "static/media/bnx-logo.svg"
   },
   {
     "position": "Graphic Designer",
-    "company": "Clementine Data Solutions, Shadhin Fintech",
+    "company": "Shadhin Fintech",
     "type": "Part Time",
     "date": "2022 - 2024",
-    "responsibilities": [
-                          "Designed content for social media and company events.",
-                          "Designed UI elements and icons for the Shadhin and DataDash app and websites."
-                        ]
+    "logo": "static/media/shadhin-logo.svg"
   },
   {
     "position": "Visualizer",
     "company": "Mindscape Communication",
     "type": "Part Time",
     "date": "2020 - 2021",
-    "responsibilities": [
-                          "Created content for different platforms and social media apps for brands like Toffee, Peakward, Autoguard, British American Tobacco, and BRAC."
-                        ]
+    "logo": "static/media/mindscape-logo.svg"
   }
 ]

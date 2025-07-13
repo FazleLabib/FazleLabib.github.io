@@ -54,22 +54,25 @@ function researchTemplate(research) {
   const contentDiv = document.createElement("div");
   contentDiv.classList.add("content");
   contentDiv.innerHTML = `
-  <div class="title-date">
-    <h3 class="title">${research.title}</h3>
-    <div class="date">${research.date}</div>
-  </div>
-  <div class="publication">
-    <h3 class="publisher">${research.publisher}</h3>
-    <a class="link" href="${research.link}" target="_blank" rel="noopener noreferrer" title="View Link">
-    <i class="fas fa-link"></i>
-    </a>
-  </div>
-  <div class="authors">
-    <h4>${research.authors}</h4>
-  </div>
-  <div class="abstract">
-    <p>${research.abstract}</p>
-  </div>
+    <div class="title-date">
+      <h3 class="title">${research.title}</h3>
+      <div class="date">${research.date}</div>
+    </div>
+    <div class="publication">
+      <h3 class="publisher">${research.publisher}</h3>
+      <a class="link" href="${research.paperLink}" target="_blank" rel="noopener noreferrer" title="Paper">
+        <i class="fas fa-link"></i> Paper
+      </a>
+      <a class="link" href="${research.codeLink}" target="_blank" rel="noopener noreferrer" title="Code">
+        <i class="fa-solid fa-code"></i> Code
+      </a>
+    </div>
+    <div class="authors">
+      <h4>${research.authors}</h4>
+    </div>
+    <div class="abstract">
+      <p>${research.abstract}</p>
+    </div>
   `;
   return contentDiv;
 }
@@ -81,34 +84,37 @@ async function loadAboutContent() {
 
     document.getElementById("article-content").textContent = data.about.article;
     document.getElementById("profile-image").src = data.about.profileImage;
+
+    const interestsContainer = document.querySelector(".research-interests");
+    if (interestsContainer) {
+      interestsContainer.innerHTML = ""; // clear if needed
+      data.about.researchInterests.forEach((interest) => {
+        const span = document.createElement("span");
+        span.textContent = interest;
+        interestsContainer.appendChild(span);
+      });
+    }
   } catch (error) {
     console.error("Error loading content:", error);
   }
 }
 
+
 function workExperienceTemplate(workExperience) {
   const contentDiv = document.createElement("div");
   contentDiv.classList.add("content");
   contentDiv.innerHTML = `
-  <div class="header">
-        <div class="employment">
-          <div class="position-date">
-            <h4 class="position">${workExperience.position}</h4>
-            <div class="date">${workExperience.date}</div>
-          </div>
-          <h4 class="company">
-            ${workExperience.company}<span class="type">${
-    workExperience.type
-  }</span>
-          </h4>
-        </div>
+    <div class="work-item">
+      <div class="company-logo">
+      <img src="${workExperience.logo}" class="filter-icon" />
       </div>
-      <div class="responsibilities">
-        <ul>
-          ${workExperience.responsibilities
-            .map((responsibility) => `<li>${responsibility}</li>`)
-            .join("")}
-        </ul>
+      <div class="work-details">
+        <div class="work-header">
+          <h4 class="company-name">${workExperience.company}</h4>
+          <span class="work-duration">${workExperience.date}</span> 
+        </div>
+        <p class="work-role">${workExperience.position} | ${workExperience.type}</p>
+      </div>
     </div>
   `;
   return contentDiv;
@@ -116,75 +122,42 @@ function workExperienceTemplate(workExperience) {
 
 function educationTemplate(education) {
   const contentDiv = document.createElement("div");
-  contentDiv.classList.add("content");
+  contentDiv.classList.add("education-item");
   contentDiv.innerHTML = `
-  <div class="header">
-        <div class="degree-info">
-          <h4 class="major">
-            ${education.major} <span class="degree">${education.degree}</span>
-          </h4>
-          <h4 class="university">${education.university}</h4>
-        </div>
-        <div class="date">${education.date}</div>
-      </div>
-      <div class="coursework">
-        <ul>
-          ${education.coursework.map((course) => `<li>${course}</li>`).join("")}
-        </ul>
-      </div>
-  `;
-  return contentDiv;
-}
-
-function skillsTemplate(skills) {
-  const contentDiv = document.createElement("div");
-  contentDiv.classList.add("content");
-  contentDiv.innerHTML = `
-  <div class="header">
-    <h4 class="category">${skills.category}</h4>
-  </div>
-  <div class="items">
-    <ul>
-      ${skills.items.map((item) => `<li>${item}</li>`).join("")}
-    </ul>
-  </div>
-  `;
-  return contentDiv;
-}
-
-function awardsTemplate(awards) {
-  const contentDiv = document.createElement("div");
-  contentDiv.classList.add("content");
-  contentDiv.innerHTML = `
-  <div class="header">
-    <h4 class="title">${awards.title}</h4>
-    <h4 class="awarding-body">${awards.awardingBody}</h4>
-  </div>
-  <p class="description">${awards.description}</p>
+    <div class="university-logo">
+      <img src="${education.universityMonogram}" class="filter-icon" />
+    </div>
+    <div class="education-details">
+      <p class="degree">BSc. ${education.major}, ${education.date}</p>
+      <p class="university-name">${education.university}</p>
+    </div>
   `;
   return contentDiv;
 }
 
 async function loadContacts() {
-  fetch("static/json/contacts.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const container = document.querySelector("#contact .content .items");
-      container.innerHTML = "";
+  try {
+    const response = await fetch("static/json/contacts.json");
+    const data = await response.json();
 
-      data.forEach((contact) => {
-        const contactDiv = document.createElement("div");
-        contactDiv.classList.add("contact");
+    const container = document.querySelector(".contact-icons");
+    container.innerHTML = "";
 
-        contactDiv.innerHTML = `
-          <i class="${contact.icon}"></i>
-          <a href="${contact.link}">${contact.linkText}</a>
-          `;
+    data.forEach((contact) => {
+      const a = document.createElement("a");
+      a.href = contact.link;
+      a.title = contact.title || contact.linkText || "";
+      if (contact.link.startsWith("http")) a.target = "_blank";
 
-        container.appendChild(contactDiv);
-      });
-    })
-    .catch((error) => console.error("Error loading contacts:", error));
+      const icon = document.createElement("i");
+      icon.className = contact.icon;
+
+      a.appendChild(icon);
+      container.appendChild(a);
+    });
+  } catch (error) {
+    console.error("Error loading contacts:", error);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -201,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadAboutContent();
   fetchAndRenderContent(
     "static/json/work-experience.json",
-    "work-experience",
+    "work",
     workExperienceTemplate
   );
   fetchAndRenderContent(
@@ -209,8 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "education",
     educationTemplate
   );
-  fetchAndRenderContent("static/json/skills.json", "skills", skillsTemplate);
-  fetchAndRenderContent("static/json/awards.json", "awards", awardsTemplate);
   loadContacts();
 });
 
@@ -230,20 +201,40 @@ updateTime();
 
 function setTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
-  document.getElementById("toggle-light").classList.toggle("active", theme === "light");
-  document.getElementById("toggle-dark").classList.toggle("active", theme === "dark");
+  document
+    .getElementById("toggle-light")
+    .classList.toggle("active", theme === "light");
+  document
+    .getElementById("toggle-dark")
+    .classList.toggle("active", theme === "dark");
 }
 
 function initTheme() {
-  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const systemPrefersDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
   const theme = systemPrefersDark ? "dark" : "light";
   setTheme(theme);
 }
 
-
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-  const newTheme = e.matches ? "dark" : "light";
-  setTheme(newTheme);
-});
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (e) => {
+    const newTheme = e.matches ? "dark" : "light";
+    setTheme(newTheme);
+  });
 
 document.addEventListener("DOMContentLoaded", initTheme);
+
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });

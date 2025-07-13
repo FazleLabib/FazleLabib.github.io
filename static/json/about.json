@@ -1,8 +1,15 @@
 {
   "about": {
-      "title": "About me",
-      "article": "I'm a software engineer and researcher based in Dhaka, Bangladesh. My research interests are along the line of AI security and vulnerability, adversarial attacks, privacy-preserving machine learning, and computer vision. I'm especially interested in building AI systems that are resilient and trustworthy. Alongside my technical work, I enjoy exploring design, often fiddling with graphic design projects. Outside of work, I'm drawn to compelling storytelling, whether it's in a film, a book, or role-playing games.",
-      "profileImage": "static/media/profile-pic.jpg",
-      "imageAlt": "Profile picture of S. M. Fazle Rabby Labib"
+    "article": "I'm a software engineer and researcher based in Dhaka, Bangladesh. My research interests are along the line of AI security and vulnerability, adversarial attacks, privacy-preserving machine learning, and computer vision. I'm especially interested in building AI systems that are resilient and trustworthy. Alongside my technical work, I enjoy exploring design, often fiddling with graphic design projects. Outside of work, I'm drawn to compelling storytelling, whether it's in a film, a book, or role-playing games.",
+    "profileImage": "static/media/profile-pic.jpg",
+    "imageAlt": "Profile picture of S. M. Fazle Rabby Labib",
+    "researchInterests": [
+      "Computer Vision",
+      "AI Security",
+      "Privacy Preserving AI",
+      "Adversarial Attacks & Defense",
+      "Trustworthy AI",
+      "Multimodal AI"
+    ]
   }
 }
