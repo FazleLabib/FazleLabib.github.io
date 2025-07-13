@@ -6,7 +6,7 @@
       "Flutter",
       ".NET Framework"
     ],
-    "image": "static/media/project-MicStream.jpg",
+    "image": "static/media/project-MicStream.webp",
     "link": "https://github.com/FazleLabib/mic-stream",
     "alt": "Mic Stream Project Image"
   },
@@ -20,7 +20,7 @@
       "CSS",
       "JavaScript"
     ],
-    "image": "static/media/project-TrafficSignClassifier.png",
+    "image": "static/media/project-TrafficSignClassifier.webp",
     "link": "https://github.com/FazleLabib/TrafficSignClassifier",
     "alt": "Traffic Sign Classifier Project Image"
   },
@@ -32,7 +32,7 @@
       "CSS",
       "JavaScript"
     ],
-    "image": "static/media/project-IPAddressTracker.png",
+    "image": "static/media/project-IPAddressTracker.webp",
     "link": "https://github.com/FazleLabib/frontend-mentor-ip-address-tracker",
     "alt": "IP Address Tracker Project Image"
   }
