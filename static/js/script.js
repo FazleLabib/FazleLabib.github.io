@@ -1,8 +1,8 @@
 function updateTitle() {
   if (window.innerWidth <= 768) {
-    document.getElementById("title").innerHTML = "S. M. F. R. Labib";
+    document.getElementById("title").innerHTML = "S M F R Labib";
   } else {
-    document.getElementById("title").innerHTML = "S. M. Fazle Rabby Labib";
+    document.getElementById("title").innerHTML = "S M Fazle Rabby Labib";
   }
 }
 
@@ -128,7 +128,7 @@ function educationTemplate(education) {
       <img src="${education.universityMonogram}" class="filter-icon" />
     </div>
     <div class="education-details">
-      <p class="degree">BSc. ${education.major}, ${education.date}</p>
+      <p class="degree">${education.degree}. ${education.major}, ${education.date}</p>
       <p class="university-name">${education.university}</p>
     </div>
   `;

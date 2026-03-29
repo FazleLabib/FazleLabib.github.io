@@ -1,4 +1,11 @@
 [
+    {
+    "universityMonogram": "/static/media/ksu-monogram.svg",
+    "major": "Computer Science",
+    "degree": "PhD",
+    "university": "Kennesaw State University",
+    "date": "2026 - Present"
+  },
   {
     "universityMonogram": "/static/media/bracu-monogram.svg",
     "major": "Computer Science & Engineering",
